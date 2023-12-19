@@ -16,7 +16,7 @@ const Buscador = () => {
 
     async function obtenerPrediccion(surface, bedrooms, restrooms) {
         try {
-          const url = `https://josemarido.pythonanywhere.com/predict?surface=${surface}&bedrooms=${bedrooms}&restrooms=${restrooms}`;
+          const url = `https://egoup.pythonanywhere.com/predict?surface=${surface}&bedrooms=${bedrooms}&restrooms=${restrooms}`;
       
           const response = await fetch(url, {
             method: 'GET',
@@ -32,12 +32,12 @@ const Buscador = () => {
           const data = await response.json();
       
           console.log('Datos de la predicción:', data);
-          // Puedes hacer más cosas con los datos aquí
+          
       
-          return data; // Devuelve los datos obtenidos
+          return data; 
         } catch (error) {
           console.error('Error al realizar la solicitud:', error);
-          throw error; // Vuelve a lanzar el error para que el consumidor de la función pueda manejarlo si es necesario
+          throw error; 
         }
       }
 
@@ -106,7 +106,7 @@ const Buscador = () => {
             </label>
           </div>
           <div className="resultado-container">
-            {resultado ? <p className="resultado">{Math.round(resultado.predictions)} €/mes</p> : <p lassName="resultado"> 0 €/mes</p>}
+            {resultado ? <p className="resultado">{Math.round(resultado.prediction)} €/mes</p> : <p lassName="resultado"> 0 €/mes</p>}
           </div>
           <div className="buscar-container">
             <button onClick={handleSubmit} className="boton-buscar">Buscar</button>
