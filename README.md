@@ -1,6 +1,6 @@
 # Taller The bridge
 
-Este es el resutado de un taller entre las diferentes vertiles dentro de The bridge school Bilbao.
+Este es el resutado de un taller entre las diferentes verticales dentro de The bridge school Bilbao.
 
 ## Tabla de contenidos
 - [Instalación](#instalacion)
