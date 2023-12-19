@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import rectangleImage from '../assets/Rectangle_14.png';
+import "./style.css"
 
 const Buscador = () => {
     const [data, setData] = useState([]);
@@ -71,48 +72,49 @@ const Buscador = () => {
         
     }
 
-  return (
-    <>
-    <section>
-      <div>
-    <h1>Hola Aitor!</h1>
-      </div>
-    <div>
-    <img src={rectangleImage} alt="" />
-    </div>
-    <div>
-    <label>Nº de habitaciones</label>
-    <button onClick={() => handleNumHabitaciones(1)} style={{backgroundColor: selectedButton === 1 ? '#0957CB' : 'initial', color: selectedButton === 1 ? "white" : "initial"}}>1</button>
-    <button onClick={() => handleNumHabitaciones(2)} style={{backgroundColor: selectedButton === 2 ? '#0957CB' : 'initial', color: selectedButton === 2 ? "white" : "initial"}}>2</button>
-    <button onClick={() => handleNumHabitaciones(3)} style={{backgroundColor: selectedButton === 3 ? '#0957CB' : 'initial', color: selectedButton === 3 ? "white" : "initial"}}>3</button>
-    <button onClick={() => handleNumHabitaciones(4)} style={{backgroundColor: selectedButton === 4 ? '#0957CB' : 'initial', color: selectedButton === 4 ? "white" : "initial"}}>4</button>
-    </div>
-    <div>
-    <label>Nº baños</label>
-    <button onClick={() => handleNumBanios(1)} style={{backgroundColor: selectedButton2 === 1 ? '#0957CB' : 'initial', color: selectedButton2 === 1 ? "white" : "initial"}}>1</button>
-    <button onClick={() => handleNumBanios(2)} style={{backgroundColor: selectedButton2 === 2 ? '#0957CB' : 'initial', color: selectedButton2 === 2 ? "white" : "initial"}}>2</button>
-    <button onClick={() => handleNumBanios(3)} style={{backgroundColor: selectedButton2 === 3 ? '#0957CB' : 'initial', color: selectedButton2 === 3 ? "white" : "initial"}}>3</button>
-    <button onClick={() => handleNumBanios(4)} style={{backgroundColor: selectedButton2 === 4 ? '#0957CB' : 'initial', color: selectedButton2 === 4 ? "white" : "initial"}}>4</button>
-    </div>
-    <div>
-    <label> Superficie
-    <input type="range" value={surface} min="50" max="100" onChange={handleSurface} />
-    <p>{surface}mts</p>
-    </label>
-    </div>
-    <div>
-    {resultado ? <p>El precio estimado es {Math.round(resultado.predictions)} €/mes</p> : <p>El precio estimado es 0 €/mes</p>}
-    </div>
-    <div>
-        <button onClick={handleSubmit}>Buscar</button>
-    </div>
-    <form action=""></form>
-
-    </section>
-
-      
-    </>
-  )
-}
-
-export default Buscador
+    return (
+      <>
+        <section className="buscador-container">
+          <div className="saludo">
+            <h1>Hola Aitor!</h1>
+          </div>
+          <div className="imagen-container">
+            <img src={rectangleImage} alt="" className="imagen" />
+          </div>
+          <div className="habitaciones-container">
+            <label className="texto-label">Nº de habitaciones</label>
+            <div className="botones-container">
+            <button onClick={() => handleNumHabitaciones(1)} className={`boton-numero ${selectedButton === 1 ? 'seleccionado' : ''}`}>1</button>
+            <button onClick={() => handleNumHabitaciones(2)} className={`boton-numero ${selectedButton === 2 ? 'seleccionado' : ''}`}>2</button>
+            <button onClick={() => handleNumHabitaciones(3)} className={`boton-numero ${selectedButton === 3 ? 'seleccionado' : ''}`}>3</button>
+            <button onClick={() => handleNumHabitaciones(4)} className={`boton-numero ${selectedButton === 4 ? 'seleccionado' : ''}`}>4</button>
+          </div>
+          </div>
+          <div className="banios-container">
+            <label>Nº baños</label>
+            <div className="botones-container">
+            <button onClick={() => handleNumBanios(1)} className={`boton-numero ${selectedButton2 === 1 ? 'seleccionado' : ''}`}>1</button>
+            <button onClick={() => handleNumBanios(2)} className={`boton-numero ${selectedButton2 === 2 ? 'seleccionado' : ''}`}>2</button>
+            <button onClick={() => handleNumBanios(3)} className={`boton-numero ${selectedButton2 === 3 ? 'seleccionado' : ''}`}>3</button>
+            <button onClick={() => handleNumBanios(4)} className={`boton-numero ${selectedButton2 === 4 ? 'seleccionado' : ''}`}>4</button>
+          </div>
+          </div>
+          <div className="superficie-container">
+            <label> Superficie
+              <input type="range" value={surface} min="50" max="100" onChange={handleSurface} className="rango-superficie" />
+              <p className="superficie-valor">{surface}mts</p>
+            </label>
+          </div>
+          <div className="resultado-container">
+            {resultado ? <p className="resultado">{Math.round(resultado.predictions)} €/mes</p> : <p lassName="resultado"> 0 €/mes</p>}
+          </div>
+          <div className="buscar-container">
+            <button onClick={handleSubmit} className="boton-buscar">Buscar</button>
+          </div>
+          <form action="" className="formulario"></form>
+        </section>
+      </>
+    );
+  };
+  
+  export default Buscador;

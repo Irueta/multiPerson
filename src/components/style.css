@@ -1,0 +1,120 @@
+.buscador-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  
+  .saludo {
+    margin-bottom: 20px;
+  }
+  
+  .imagen {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .habitaciones-container,
+  .banios-container,
+  .superficie-container,
+  .resultado-container
+   {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: #F4F4F4;
+    border-radius: 22.5px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+            
+ .botones-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+ }
+  
+  
+  .boton-numero {
+    
+    background-color: initial;
+    color: initial;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+  }
+  
+  .boton-numero:hover,
+  .boton-numero.seleccionado {
+    background-color: #0957CB;
+    color: white;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+   
+
+  }
+
+
+.texto-labell{
+    color: #09223D;
+font-size: 16px;
+font-family: 'DM Sans', sans-serif;
+font-weight: 400;
+line-height: 29.31px;
+word-wrap: break-word
+}
+  .boton-buscar{
+    background-color:#0957CB;
+    color: #FFFFFF;
+    width: 100%; height: 100%; box-shadow: 0px 7px 17px rgba(9, 87, 203, 0.32); border-radius: 25px
+  }
+  
+  .rango-superficie {
+    width: 80%;
+
+    margin-top: 10px;
+  }
+  
+  .superficie-valor {
+    margin-top: 10px;
+  }
+  
+  .buscar-container{
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+   
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+   
+  }
+
+.resultado{
+    color: #09223D;
+font-size: 48px;
+font-family: 'DM Sans', sans-serif;
+font-weight: bolder;
+line-height: 87.94px;
+word-wrap: break-word
+}
+

@@ -1,8 +1,38 @@
-# React + Vite
+# Taller The bridge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el resutado de un taller entre las diferentes vertiles dentro de The bridge school Bilbao.
 
-Currently, two official plugins are available:
+## Tabla de contenidos
+- [Instalación](#instalacion)
+- [Uso](#uso)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Instalación
+
+Para arrancar el proyecto sigue los pasos de instalación:
+
+
+1. Clonar el proyecto:
+
+```bash
+   git clone https://github.com/Irueta/multiPerson
+    
+```
+
+2. Instala las dependencias:
+
+     ```bash
+     npm install
+    ```
+
+
+3. Arranca la aplicacion: 
+
+    ```bash
+    npm run dev
+    ```
+La aplicación estará accesible en https://localhost:tu_puerto. Asegúrate de reemplazar 'tu_puerto' con el número actual donde está funcionando tu aplicación."
+
+## Uso
+
+Completa los campos de habitaciones, baños y metros cuadrador y obten un precion basado en un modelo predictivo.
