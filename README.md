@@ -35,4 +35,4 @@ La aplicación estará accesible en https://localhost:tu_puerto. Asegúrate de r
 
 ## Uso
 
-Completa los campos de habitaciones, baños y metros cuadrador y obten un precion basado en un modelo predictivo.
+Completa los campos de habitaciones, baños y metros cuadrados y obten un precio basado en un modelo predictivo.
